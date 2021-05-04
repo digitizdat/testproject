@@ -6,7 +6,7 @@ dist: $(BUILD_PKG)  ## Build an distributable package
 $(BUILD_PKG): 
 	mkdir -p $(BUILD_TEMP)
 	cp lambda-source/* $(BUILD_TEMP)
-	cd $(BUILD_TEMP) && pip install -qt . -r requirements.txt && \
+	cd $(BUILD_TEMP) && pip3 install -qt . -r requirements.txt && \
 	  zip -qr ../$(BUILD_PKG) .
 
 clean:
